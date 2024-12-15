@@ -31,7 +31,7 @@ body{
 
     /*Short Render*/
     background: var(--bg-url) no-repeat top center /cover;
-
+    height: 100vh;
 }
 
 body * {
@@ -40,9 +40,10 @@ body * {
 }
 
 #container {
-    width: 360px;
+    width: 100%;
+    max-width: 388px;
     margin: 35px auto 0px;
-    padding: 0 24px;
+    padding: 0 24px auto 24px;
 }
 
 #profile {
@@ -159,3 +160,14 @@ footer {
     text-align: center;
 }
 
+/* Media queries */
+
+@media (min-width: 700px) {
+    :root{
+        --bg-url: url(./assets/bg-desktop.jpg);
+    }
+
+    .light{
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+}
